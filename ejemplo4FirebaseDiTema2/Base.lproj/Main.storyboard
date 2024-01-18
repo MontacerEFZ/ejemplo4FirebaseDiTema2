@@ -36,12 +36,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSU-Iv-2ky">
-                                <rect key="frame" x="20" y="355" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSU-Iv-2ky">
+                                <rect key="frame" x="20" y="736" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="L4K-FG-CCO"/>
+                                    <constraint firstAttribute="height" constant="30" id="SWP-0y-6LC"/>
+                                </constraints>
                                 <state key="normal" title="logout"/>
                                 <connections>
                                     <action selector="btnLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xK-hy-Cqr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrr-nq-tA0">
+                                <rect key="frame" x="20" y="349" width="364" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="eAq-d3-cFL"/>
+                                    <constraint firstAttribute="height" constant="34" id="eYr-MQ-6bn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7k-90-fOJ">
+                                <rect key="frame" x="20" y="447" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="IKT-0x-4QD"/>
+                                    <constraint firstAttribute="height" constant="34" id="Pu7-Yh-zz3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHI-NW-xbt">
+                                <rect key="frame" x="20" y="507" width="364" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="bDY-jt-9qh"/>
+                                    <constraint firstAttribute="height" constant="30" id="o51-hv-m5x"/>
+                                </constraints>
+                                <state key="normal" title="guardar"/>
+                                <connections>
+                                    <action selector="btnGuardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2y-Vd-bd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-2J-tTE">
+                                <rect key="frame" x="20" y="644" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="5eA-me-yPv"/>
+                                    <constraint firstAttribute="height" constant="30" id="nBz-5j-KcO"/>
+                                </constraints>
+                                <state key="normal" title="eliminar"/>
+                                <connections>
+                                    <action selector="btnEliminar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q79-3m-Z0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lb-YS-rcq">
+                                <rect key="frame" x="20" y="571" width="364" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HJ0-nd-a5k"/>
+                                    <constraint firstAttribute="width" constant="364" id="JlP-eV-hPt"/>
+                                </constraints>
+                                <state key="normal" title="recuperar info"/>
+                                <connections>
+                                    <action selector="btnRecuperar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uNo-kk-QHB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,15 +103,35 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TGD-5n-rcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BAl-UV-brS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KIg-2J-tTE" secondAttribute="trailing" constant="20" id="BNj-Ta-Y0o"/>
+                            <constraint firstItem="jrr-nq-tA0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DgE-CC-kXu"/>
+                            <constraint firstItem="7lb-YS-rcq" firstAttribute="top" secondItem="CHI-NW-xbt" secondAttribute="bottom" constant="34" id="EwO-Uf-23N"/>
+                            <constraint firstItem="KIg-2J-tTE" firstAttribute="top" secondItem="7lb-YS-rcq" secondAttribute="bottom" constant="43" id="GtQ-LZ-Onj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7lb-YS-rcq" secondAttribute="trailing" constant="30" id="IRu-KT-nRd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrr-nq-tA0" secondAttribute="trailing" constant="30" id="KGM-kd-G2H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSU-Iv-2ky" secondAttribute="trailing" constant="20" id="LCM-aD-Jhd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGD-5n-rcD" secondAttribute="trailing" constant="30" id="NPX-27-lhs"/>
+                            <constraint firstItem="CHI-NW-xbt" firstAttribute="top" secondItem="o7k-90-fOJ" secondAttribute="bottom" constant="26" id="OyM-Ed-3p6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPy-n6-bFR" secondAttribute="trailing" constant="30" id="UN6-pr-OFl"/>
+                            <constraint firstItem="7lb-YS-rcq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VfQ-25-1RJ"/>
                             <constraint firstItem="TGD-5n-rcD" firstAttribute="top" secondItem="tPy-n6-bFR" secondAttribute="bottom" constant="61" id="Zz0-TC-r0J"/>
+                            <constraint firstItem="o7k-90-fOJ" firstAttribute="top" secondItem="jrr-nq-tA0" secondAttribute="bottom" constant="64" id="ai0-Jv-X41"/>
+                            <constraint firstItem="rSU-Iv-2ky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dsS-fk-dfi"/>
+                            <constraint firstItem="CHI-NW-xbt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eGx-IA-aa3"/>
+                            <constraint firstItem="rSU-Iv-2ky" firstAttribute="top" secondItem="KIg-2J-tTE" secondAttribute="bottom" constant="62" id="eiE-5U-wb8"/>
+                            <constraint firstItem="o7k-90-fOJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oua-h6-MOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CHI-NW-xbt" secondAttribute="trailing" constant="30" id="p6N-Lc-3gO"/>
+                            <constraint firstItem="KIg-2J-tTE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qRb-EZ-N6R"/>
+                            <constraint firstItem="jrr-nq-tA0" firstAttribute="top" secondItem="TGD-5n-rcD" secondAttribute="bottom" constant="57" id="tal-fA-xXs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o7k-90-fOJ" secondAttribute="trailing" constant="20" id="w0k-5I-nf8"/>
                             <constraint firstItem="tPy-n6-bFR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="yp4-fd-GSw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lbEmail" destination="tPy-n6-bFR" id="rRU-7N-1Mf"/>
                         <outlet property="lbUserId" destination="TGD-5n-rcD" id="0op-sw-aNb"/>
+                        <outlet property="txtDireccion" destination="jrr-nq-tA0" id="j1i-YS-2dL"/>
+                        <outlet property="txtTelefono" destination="o7k-90-fOJ" id="x8P-yw-8ZV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
